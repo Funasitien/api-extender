@@ -22,6 +22,21 @@ return [
             'title' => 'Users List',
             'description' => 'Returns a list of all users',
             'example' => 'Request example'
+        ],
+        'money' => [
+            'title' => 'Money',
+            'description' => 'Returns money information',
+            'example' => 'Request example'
+        ],
+        'social' => [
+            'title' => 'Social Networks',
+            'description' => 'Returns social networks information',
+            'example' => 'Request example'
+        ],
+        'root' => [
+            'title' => 'Maintenance Status',
+            'description' => 'Checks if the site is under maintenance (0 or 1) and returns the maintenance message',
+            'example' => 'Request example'
         ]
     ]
 ];

@@ -22,6 +22,21 @@ return [
             'title' => 'Liste des utilisateurs',
             'description' => 'Retourne la liste de tous les utilisateurs',
             'example' => 'Exemple de requête'
+        ],
+        'money' => [
+            'title' => 'Monnaie',
+            'description' => 'Retourne les informations sur la monnaie',
+            'example' => 'Exemple de requête'
+        ],
+        'social' => [
+            'title' => 'Réseaux sociaux',
+            'description' => 'Retourne les informations sur les réseaux sociaux',
+            'example' => 'Exemple de requête'
+        ],
+        'root' => [
+            'title' => 'État de maintenance',
+            'description' => 'Vérifie si le site est en maintenance (0 ou 1) et retourne le message de maintenance',
+            'example' => 'Exemple de requête'
         ]
     ]
 ];

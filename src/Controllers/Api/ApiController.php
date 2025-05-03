@@ -1,12 +1,15 @@
 <?php
 
 namespace Azuriom\Plugin\ApiExtender\Controllers\Api;
+use Azuriom\Extensions\Plugin\PluginManager;
 
 use Azuriom\Http\Controllers\Controller;
 use Azuriom\Models\Server;
 use Azuriom\Models\Role;
 use Azuriom\Models\User;
+use Azuriom\Models\SocialLink;
 use Azuriom\Plugin\ApiExtender\Middleware\VerifyApiKey;
+
 
 class ApiController extends Controller
 {
@@ -20,7 +23,15 @@ class ApiController extends Controller
      */
     public function index()
     {
-        return response()->json('Hello World!');
+        $maintenance = setting('maintenance.enabled', "0");
+        $maintenanceMessage = setting('maintenance.message', 'The server is currently under maintenance. Please check back later.');
+        return response()->json(['maintenance' => $maintenance, 'message' => $maintenanceMessage]);
+    }
+
+    public function money()
+    {
+        $moneyName = setting('money', 'points');
+        return response()->json(['money' => $moneyName]);
     }
 
     public function servers()
@@ -39,6 +50,11 @@ class ApiController extends Controller
     {
         $users = User::select('id', 'name', 'role_id', 'is_banned')->get();
         return response()->json($users);
+    }
+    public function social()
+    {
+        $social = SocialLink::select('type', 'value', 'position')->get();
+        return response()->json($social);
     }
     
 

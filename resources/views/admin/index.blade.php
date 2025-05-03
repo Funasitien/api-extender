@@ -17,6 +17,36 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="endpoint-card mb-4">
+                        <h3 class="text-primary">{{ trans('apiextender::messages.endpoints.root.title') }}</h3>
+                        <div class="method-badge bg-primary text-white">GET</div>
+                        <code class="endpoint-url">api/apiextender/</code>
+                        <p class="mt-2">{{ trans('apiextender::messages.endpoints.root.description') }}</p>
+                        <div class="mt-3">
+                            <h6>{{ trans('apiextender::messages.endpoints.root.example') }} :</h6>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/" -H "API-Key: votre_cle_api"</code></pre>
+                        </div>
+                    </div>
+                    <div class="endpoint-card mb-4">
+                        <h3 class="text-primary">{{ trans('apiextender::messages.endpoints.money.title') }}</h3>
+                        <div class="method-badge bg-primary text-white">GET</div>
+                        <code class="endpoint-url">api/apiextender/money</code>
+                        <p class="mt-2">{{ trans('apiextender::messages.endpoints.money.description') }}</p>
+                        <div class="mt-3">
+                            <h6>{{ trans('apiextender::messages.endpoints.money.example') }} :</h6>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/money" -H "API-Key: votre_cle_api"</code></pre>
+                        </div>
+                    </div>
+                    <div class="endpoint-card mb-4">
+                        <h3 class="text-primary">{{ trans('apiextender::messages.endpoints.social.title') }}</h3>
+                        <div class="method-badge bg-primary text-white">GET</div>
+                        <code class="endpoint-url">api/apiextender/social</code>
+                        <p class="mt-2">{{ trans('apiextender::messages.endpoints.social.description') }}</p>
+                        <div class="mt-3">
+                            <h6>{{ trans('apiextender::messages.endpoints.social.example') }} :</h6>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/social" -H "API-Key: votre_cle_api"</code></pre>
+                        </div>
+                    </div>
+                    <div class="endpoint-card mb-4">
                         <h3 class="text-primary">{{ trans('apiextender::messages.endpoints.servers.title') }}</h3>
                         <div class="method-badge bg-primary text-white">GET</div>
                         <code class="endpoint-url">api/apiextender/servers</code>

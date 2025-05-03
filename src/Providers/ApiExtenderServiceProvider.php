@@ -4,6 +4,7 @@ namespace Azuriom\Plugin\ApiExtender\Providers;
 
 use Azuriom\Extensions\Plugin\BasePluginServiceProvider;
 use Azuriom\Models\Permission;
+use Azuriom\Games\Game;
 
 class ApiExtenderServiceProvider extends BasePluginServiceProvider
 {
@@ -88,24 +89,28 @@ class ApiExtenderServiceProvider extends BasePluginServiceProvider
      */
     protected function adminNavigation(): array
     {
+        $items = [
+            'apiextender.admin.index' => [
+                'name' => trans('apiextender::admin.title'),
+            ],                    
+            'apiextender.admin.api-keys.index' => [
+                'name' => trans('apiextender::admin.keys'),
+            ],
+        ];
+
+        if (game()->id() === 'mc-offline' || game()->id() === 'mc-online') {  
+            $items['apiextender.admin.images'] = [
+                'name' => trans('apiextender::admin.images'),
+            ];
+        }
+
         return [
             'apiextender' => [
                 'name' => 'API Extender',
                 'type' => 'dropdown',
                 'icon' => 'bi bi-gear',
                 'route' => 'apiextender.admin.*',
-                'items' => [
-                    'apiextender.admin.index' => [
-                        'name' => trans('apiextender::admin.title'),
-                    ],
-                    'apiextender.admin.images' => [
-                        'name' => trans('apiextender::admin.images'),
-                    ],
-                    
-                    'apiextender.admin.api-keys.index' => [
-                        'name' => trans('apiextender::admin.keys'),
-                    ]
-                ]
+                'items' => $items
             ]
         ];
     }

@@ -23,7 +23,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.root.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.root.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/') }}" -H "API-Key: votre_cle_api"</code></pre>
                         </div>
                     </div>
                     <div class="endpoint-card mb-4">
@@ -33,7 +33,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.money.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.money.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/money" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/money') }}" -H "API-Key: votre_cle_api"</code></pre>
                         </div>
                     </div>
                     <div class="endpoint-card mb-4">
@@ -43,7 +43,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.social.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.social.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/social" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/social') }}" -H "API-Key: votre_cle_api"</code></pre>
                         </div>
                     </div>
                     <div class="endpoint-card mb-4">
@@ -53,7 +53,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.servers.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.servers.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/servers" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/servers') }}" -H "API-Key: votre_cle_api"</code></pre>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.roles.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.roles.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/roles" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/roles') }}" -H "{{ trans('apiextender::messages.auth.header') }}"</code></pre>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.users.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.users.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "http://127.0.0.1:8000/api/apiextender/users" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/users') }}" -H "API-Key: votre_cle_api"</code></pre>
                         </div>
                     </div>
                 </div>

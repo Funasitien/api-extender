@@ -20,7 +20,7 @@ class ApiImagesController extends Controller
         ])->get($url);
 
         if (!$response->successful()) {
-            return response()->json(['error' => 'Impossible de récupérer l\'image', 'url' => $url, 'error' => $response->body()], $response->status());
+            return response()->json(['error' => 'impossible to get the image', 'url' => $url, 'error' => $response->body()], $response->status());
         }
 
         return response($response->body())

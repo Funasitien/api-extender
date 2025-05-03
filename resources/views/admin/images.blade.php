@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <hr>
                 <p><strong>{{ trans('apiextender::admin.example_url') }}</strong></p>
-                <code>/api/apiextender/images/{request}/{crop}/authuser</code>
+                <code>/api/apiextender/images/{request}/{crop}/{{ auth()->user()->name }}</code>
             </div>
         @else
             <div class="card-body">

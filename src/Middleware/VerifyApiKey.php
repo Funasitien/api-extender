@@ -13,13 +13,13 @@ class VerifyApiKey
         $apiKey = $request->header('API-Key');
 
         if (!$apiKey) {
-            return response()->json(['error' => 'Clé API manquante'], 401);
+            return response()->json(['error' => 'API key missing'], 401);
         }
 
         $validKey = ApiKey::where('api_key', $apiKey)->where('is_active', true)->exists();
 
         if (!$validKey) {
-            return response()->json(['error' => 'Clé API invalide'], 401);
+            return response()->json(['error' => 'API key invalid'], 401);
         }
 
         return $next($request);

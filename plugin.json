@@ -1,0 +1,15 @@
+{
+    "id": "apiextender",
+    "name": "Api-Extender",
+    "description": "permet d'etendre les fonctionnalités des api de Azuriom",
+    "version": "1.0.0",
+    "url": "https://azuriom.com",
+    "authors": [
+        "vexat0"
+    ],
+    "azuriom_api": "1.1.0",
+    "providers": [
+        "\\Azuriom\\Plugin\\ApiExtender\\Providers\\ApiExtenderServiceProvider",
+        "\\Azuriom\\Plugin\\ApiExtender\\Providers\\RouteServiceProvider"
+    ]
+}

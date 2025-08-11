@@ -33,6 +33,11 @@ return [
             'description' => 'Returns social networks information',
             'example' => 'Request example'
         ],
+        'shop' => [
+            'title' => 'Shop',
+            'description' => 'Returns shop information',
+            'example' => 'Request example'
+        ],
         'root' => [
             'title' => 'Maintenance Status',
             'description' => 'Checks if the site is under maintenance (0 or 1) and returns the maintenance message',

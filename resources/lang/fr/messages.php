@@ -33,6 +33,11 @@ return [
             'description' => 'Retourne les informations sur les réseaux sociaux',
             'example' => 'Exemple de requête'
         ],
+        'shop' => [
+            'title' => 'Boutique',
+            'description' => 'Retourne les informations sur la boutique',
+            'example' => 'Exemple de requête'
+        ],
         'root' => [
             'title' => 'État de maintenance',
             'description' => 'Vérifie si le site est en maintenance (0 ou 1) et retourne le message de maintenance',

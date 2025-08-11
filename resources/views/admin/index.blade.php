@@ -75,9 +75,23 @@
                         <p class="mt-2">{{ trans('apiextender::messages.endpoints.users.description') }}</p>
                         <div class="mt-3">
                             <h6>{{ trans('apiextender::messages.endpoints.users.example') }} :</h6>
-                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/users') }}" -H "API-Key: votre_cle_api"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/users') }}" -H "{{ trans('apiextender::messages.auth.header') }}"</code></pre>
                         </div>
                     </div>
+                    @plugin('shop')
+                                        <div class="endpoint-card mb-4">
+                        <h3 class="text-primary">{{ trans('apiextender::messages.endpoints.shop.title') }}</h3>
+                        <div class="method-badge bg-primary text-white">GET</div>
+                        <code class="endpoint-url">api/apiextender/shop/categories</code>
+                        <code class="endpoint-url">api/apiextender/shop/payments</code>
+                        <p class="mt-2">{{ trans('apiextender::messages.endpoints.shop.description') }}</p>
+                        <div class="mt-3">
+                            <h6>{{ trans('apiextender::messages.endpoints.shop.example') }} :</h6>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/shop/categories') }}" -H "{{ trans('apiextender::messages.auth.header') }}"</code></pre>
+                            <pre class="bg-light p-3 rounded"><code>curl -X GET "{{ url('/api/apiextender/shop/payments') }}" -H "{{ trans('apiextender::messages.auth.header') }}"</code></pre>
+                        </div>
+                    </div>
+                    @endplugin
                 </div>
             </div>
         </div>

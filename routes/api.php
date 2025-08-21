@@ -20,6 +20,7 @@ use Azuriom\Extensions\Plugin\PluginManager;
 Route::get('/', [ApiController::class, 'index']);
 Route::get('/servers', [ApiController::class, 'servers']);
 Route::get('/roles', [ApiController::class, 'roles']);
+Route::get('/user/{identifier}', [ApiController::class, 'user']);
 Route::get('/users', [ApiController::class, 'users']);
 Route::get('/money', [ApiController::class, 'money']);
 Route::get('/social', [ApiController::class, 'social']);

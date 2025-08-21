@@ -56,6 +56,28 @@ class ApiController extends Controller
         $social = SocialLink::select('type', 'value', 'position')->get();
         return response()->json($social);
     }
+
+    public function user($identifier)
+{
+    $user = User::where('id', $identifier)
+        ->orWhere('name', $identifier)
+        ->orWhere('discordAccount.id', $identifier)
+        ->first();
+
+    if (!$user) {
+        return response()->json(['error' => 'User not found'], 404);
+    }
+
+    return response()->json([
+        'id' => $user->id,
+        'name' => $user->name,
+        'email' => $user->email,
+        'role_id' => $user->role_id,
+        'is_banned' => $user->is_banned,
+        'created_at' => $user->created_at,
+        'updated_at' => $user->updated_at
+    ]);
+}
     
 
 }
